@@ -23,3 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 .env
+.vercel
+github-ci-cd.yml
