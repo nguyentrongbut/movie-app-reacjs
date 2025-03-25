@@ -1,0 +1,22 @@
+// Responsive
+// breakpoints
+$breakpoints: (
+        mobile: 480px,
+        tablet: 768px,
+        laptop: 1024px,
+        desktop: 1200px
+);
+
+// Mixin responsive
+@mixin breakpoint($point) {
+  @if map-has-key($breakpoints, $point) {
+    $size: map-get($breakpoints, $point);
+    @media (max-width: $size) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint #{$point} không tồn tại!";
+  }
+}
+
+//End Responsive
