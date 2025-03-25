@@ -1,5 +1,7 @@
+import AllRoute from './components/AllRoute/index.jsx';
+
 function App() {
-    return <>Chủ đề</>;
+    return <AllRoute></AllRoute>;
 }
 
 export default App;
