@@ -2,42 +2,23 @@
   margin-top: 6px;
   height: 36px;
   width: 315px;
-  input {
+  .ant-input {
     padding-left: 16px;
     color: rgba(255, 255, 255, .6);
-    background: rgba(255, 255, 255, .08);
-    border-radius: 100px;
-    border: none;
-    font-size: 16px;
+    background: rgba(255, 255, 255, .08) !important;
     &:hover {
-      background: rgba(255, 255, 255, .08);
-      border: none;
       color: #fff;
     }
-    &:focus {
-      background: rgba(255, 255, 255, .08);
-      border: none;
-      box-shadow: none;
-    }
+
     &::placeholder {
       color: rgba(255, 255, 255, .6);
     }
   }
-  span button {
-    font-size: 18px;
+
+  .ant-btn-icon {
     color: rgba(255, 255, 255, .6);
-    background: rgba(255, 255, 255, .08);
-    border-radius: 100px;
-    border: none;
-    span {
-      color: rgba(255, 255, 255, .6);
-      &:hover {
-        color: white;
-      }
-    }
     &:hover {
-      background: rgba(255, 255, 255, .08) !important;
-      border: none !important;
+      color: white;
     }
   }
 }

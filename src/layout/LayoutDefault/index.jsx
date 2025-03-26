@@ -11,6 +11,8 @@ const LayoutDefault = () => {
             theme={{
                 components: {
                     Layout: {
+                        headerBg: "transparent",
+                        headerHeight: 76,
                         siderBg: "rgb(22, 22, 26)",
                         triggerBg: "rgb(22, 22, 26)",
                     },

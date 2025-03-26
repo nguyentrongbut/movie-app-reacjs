@@ -18,9 +18,6 @@ const SiderCustom = () => {
                         collapsedIconSize: 18,
                         itemBorderRadius: 0,
                     }
-                },
-                token : {
-
                 }
             }}
         >
