@@ -1,43 +1,35 @@
 import { Outlet } from 'react-router-dom';
-import { Layout, Menu } from 'antd';
+import { ConfigProvider, Layout } from 'antd';
 import HeaderDefault from '../HeaderDefault/index.jsx';
-const { Content, Sider } = Layout;
+import SiderCustom from '../Sider/index.jsx';
+
+const { Content } = Layout;
 
 const LayoutDefault = () => {
     return (
-        <Layout className="layout">
-            <Sider>
-                <Menu
-                    theme="dark"
-                    className="sider"
-                    mode="inline"
-                    defaultSelectedKeys={['1']}
-                    items={[
-                        {
-                            key: '1',
-
-                            label: 'nav 1',
-                        },
-                        {
-                            key: '2',
-
-                            label: 'nav 2',
-                        },
-                        {
-                            key: '3',
-
-                            label: 'nav 3',
-                        },
-                    ]}
-                ></Menu>
-            </Sider>
+        <ConfigProvider
+            theme={{
+                components: {
+                    Layout: {
+                        siderBg: "rgb(22, 22, 26)",
+                        triggerBg: "rgb(22, 22, 26)",
+                    },
+                },
+                token : {
+                    fontSize: 16
+                }
+            }}
+        >
             <Layout>
-                <HeaderDefault></HeaderDefault>
-                <Content>
-                    <Outlet></Outlet>
-                </Content>
+                <SiderCustom></SiderCustom>
+                <Layout>
+                    <HeaderDefault></HeaderDefault>
+                    <Content style={{height: 1000}}>
+                        <Outlet></Outlet>
+                    </Content>
+                </Layout>
             </Layout>
-        </Layout>
+        </ConfigProvider>
     );
 };
 
