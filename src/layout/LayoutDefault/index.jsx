@@ -1,15 +1,15 @@
 import { Outlet } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
-import "./LayoutDefault.scss"
-const { Header, Content, Sider } = Layout;
+import HeaderDefault from '../HeaderDefault/index.jsx';
+const { Content, Sider } = Layout;
 
 const LayoutDefault = () => {
     return (
-        <Layout>
+        <Layout className="layout">
             <Sider>
                 <Menu
                     theme="dark"
-                    className="menu"
+                    className="sider"
                     mode="inline"
                     defaultSelectedKeys={['1']}
                     items={[
@@ -32,7 +32,7 @@ const LayoutDefault = () => {
                 ></Menu>
             </Sider>
             <Layout>
-                <Header className="custom-header"></Header>
+                <HeaderDefault></HeaderDefault>
                 <Content>
                     <Outlet></Outlet>
                 </Content>

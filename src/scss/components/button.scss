@@ -1,0 +1,41 @@
+@use "../base/mixins" as *;
+
+.btn {
+  &__opacity {
+    display: flex;
+    gap: 8px;
+    padding: 0 12px;
+    align-items: center;
+    height: 36px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, .08);
+    color: rgba(255, 255, 255, .6);
+    border-radius: 30px;
+    @include breakpoint(laptop) {
+      border-radius: 999px;
+    }
+    &:hover {
+      color: white;
+      background: rgba(255, 255, 255, .08);
+    }
+    &--title {
+      @include breakpoint(laptop) {
+        display: none;
+      }
+    }
+  }
+
+  &__dark {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, .6);
+    background: rgba(255, 255, 255, .08);
+    font-size: 15px;
+    padding: 4px 0;
+    &:hover {
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@use "../base/mixins" as *;
+
+.tooltip {
+  &-header {
+    .ant-tooltip-inner {
+      width: 350px;
+      padding: 20px;
+      font-size: 16px;
+      @include breakpoint(laptop) {
+        display: none;
+      }
+    }
+
+    &__title {
+      border-bottom: 1px solid rgba(255, 255, 255, .2);
+      padding-bottom: 6px;
+    }
+
+    &__list {
+      margin-bottom: 4px;
+    }
+
+    &__item {
+      font-size: 15px;
+      padding: 10px;
+      color: rgba(255, 255, 255, .6);
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
