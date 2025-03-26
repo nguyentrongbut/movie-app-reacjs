@@ -1,7 +1,7 @@
 import { Col, Input, Layout, Row, Tooltip } from 'antd';
 import { FilterOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
-import { CATEGORYSFILTER } from '../../libs/constants.js';
+import { CATEGORYSFILTER } from '../../libs/constants.jsx';
 import { useEffect, useState } from 'react';
 
 const { Search } = Input;
@@ -30,7 +30,7 @@ const HeaderDefault = () => {
             <div className="header__right">
                 <Search placeholder="Nhập tên phim để tìm kiếm..." className="search"></Search>
                 <Tooltip
-                    overlayClassName="tooltip-header"
+                    classNames={{ root: "tooltip-header" }}
                     title={
                         <div>
                             <div className="tooltip-header__title">Lọc theo danh mục</div>
